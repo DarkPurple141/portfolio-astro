@@ -37,7 +37,7 @@ importers:
       '@astrojs/tailwind': ^5.0.2
       '@halyard/reset': latest
       '@halyard/tailwind-preset': latest
-      '@halyard/ui': ^1.0.1
+      '@halyard/ui': latest
       '@types/react': ^18.0.21
       '@types/react-dom': ^18.0.6
       astro: ^3.5.2
