@@ -9,6 +9,9 @@ node_modules/
 
 pnpm-debug.log*
 
+# turbo repo
+.turbo
+
 # environment variables
 .env
 .env.production
