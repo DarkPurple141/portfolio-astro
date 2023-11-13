@@ -37,7 +37,7 @@ importers:
       '@astrojs/tailwind': ^5.0.2
       '@halyard/reset': latest
       '@halyard/tailwind-preset': latest
-      '@halyard/ui': latest
+      '@halyard/ui': ^1.0.1
       '@types/react': ^18.0.21
       '@types/react-dom': ^18.0.6
       astro: ^3.5.2
@@ -54,7 +54,7 @@ importers:
       '@astrojs/tailwind': 5.0.2_7tnzx6dwfs5srlz44rzdh4n7xm
       '@halyard/reset': 1.0.0
       '@halyard/tailwind-preset': 1.0.0_tailwindcss@3.3.5
-      '@halyard/ui': 1.0.0
+      '@halyard/ui': 1.0.1
       '@types/react': 18.2.37
       '@types/react-dom': 18.2.15
       astro: 3.5.3_typescript@5.2.2
@@ -1102,8 +1102,8 @@ packages:
       - tailwindcss
     dev: false
 
-  /@halyard/ui/1.0.0:
-    resolution: {integrity: sha512-bg7kDOfSGejqEswMHoIjyfdge8yzmD2F5/EDaRZtYJ/AH6Hb/oU+aLcwf5jgUTB14rx0M1KBHz9WO4WABfIGkg==}
+  /@halyard/ui/1.0.1:
+    resolution: {integrity: sha512-+3JJHW6ACF9bESweaCZPi6m9WKoKjJ0+X4Zv8FbN5h0AkflQqPguQRJhXc+Jk4StDj6x676UKSM1Gr30SiBSGw==}
     dev: false
 
   /@humanwhocodes/config-array/0.5.0:
