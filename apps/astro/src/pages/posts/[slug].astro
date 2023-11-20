@@ -1,21 +1,27 @@
 ---
-import { Heading } from '@halyard/ui';
-import Layout from '../../layouts/Layout.astro';
+import { Heading } from '@halyard/ui'
+import Layout from '../../layouts/Layout.astro'
 
 export async function getStaticPaths() {
-  return fetch('https://alhinds.com/content').then((res) =>
-  res.json()
-  // @ts-expect-error
-  ).then(posts => posts.map((post) => ({ params: { slug: post.slug }})) || []);
+  return fetch('https://alhinds.com/content')
+    .then((res) => res.json())
+    .then(
+      // @ts-expect-error
+      (posts) => posts.map((post) => ({ params: { slug: post.slug } })) || [],
+    )
 }
 
-const { slug } = Astro.params;
+const { slug } = Astro.params
 
-const post = await fetch(`https://alhinds.com/content?slug=${slug}`).then((res) =>
-  res.json()
-);
+const post = await fetch(`https://alhinds.com/content?slug=${slug}`).then(
+  (res) => res.json(),
+)
 ---
-<Layout title={post.frontmatter.title} description={post.frontmatter.description}>
+
+<Layout
+  title={post.frontmatter.title}
+  description={post.frontmatter.description}
+>
   <div class="mb-8">
     <Heading as="h1" className="heading-lg">
       {post.frontmatter.title}

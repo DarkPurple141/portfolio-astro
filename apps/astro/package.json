@@ -27,10 +27,12 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@halyard/prettier-config": "workspace:*",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.0.0",
     "eslint-plugin-astro": "^0.29.1",
     "postcss": "^8.4.21",
+    "prettier": "^3.0.0",
     "prettier-plugin-astro": "^0.12.2",
     "vite": "^4.5.0"
   }

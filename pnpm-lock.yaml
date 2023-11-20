@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@changesets/cli': ^2.26.0
+      '@halyard/prettier-config': workspace:*
       '@halyard/tsconfig': ^1.0.0
       '@types/node': ^17.0.45
       '@typescript-eslint/eslint-plugin': ^6.0.0
@@ -12,21 +13,22 @@ importers:
       eslint: ^8.0.0
       eslint-config-prettier: ^8.5.0
       eslint-plugin-prettier: ^4.2.1
-      prettier: ^2.8.0
+      prettier: ^3.0.0
       tsx: ^3.7.1
       turbo: ^1.10.0
       turbo-ignore: ^1.0.0
       typescript: ^5.0.0
     devDependencies:
       '@changesets/cli': 2.26.2
+      '@halyard/prettier-config': link:packages/prettier
       '@halyard/tsconfig': 1.0.0
       '@types/node': 17.0.45
       '@typescript-eslint/eslint-plugin': 6.10.0_qhmszyw3bdq6yznznnnpb6gov4
       '@typescript-eslint/parser': 6.10.0_6acznz3ehjwuvmze655r5sqk3e
       eslint: 8.54.0
       eslint-config-prettier: 8.10.0_eslint@8.54.0
-      eslint-plugin-prettier: 4.2.1_gpykmyejmlalemimawo4xcptki
-      prettier: 2.8.8
+      eslint-plugin-prettier: 4.2.1_a6ppxcnxb5obg7lzwilkwvv4qa
+      prettier: 3.1.0
       tsx: 3.14.0
       turbo: 1.10.16
       turbo-ignore: 1.10.16
@@ -37,6 +39,7 @@ importers:
       '@astrojs/check': ^0.3.1
       '@astrojs/react': ^3.0.4
       '@astrojs/tailwind': ^5.0.2
+      '@halyard/prettier-config': workspace:*
       '@halyard/reset': latest
       '@halyard/tailwind-preset': latest
       '@halyard/ui': latest
@@ -47,6 +50,7 @@ importers:
       eslint: ^8.0.0
       eslint-plugin-astro: ^0.29.1
       postcss: ^8.4.21
+      prettier: ^3.0.0
       prettier-plugin-astro: ^0.12.2
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -55,7 +59,7 @@ importers:
       vite: ^4.5.0
       zod: ^3.22.4
     dependencies:
-      '@astrojs/check': 0.3.1_begfeaau5vcimuafwi3vctrbdm
+      '@astrojs/check': 0.3.1_ffhif7pxshgirw44kv46whcfeq
       '@astrojs/react': 3.0.4_tbosyefgxmupywhikdanxqxzri
       '@astrojs/tailwind': 5.0.2_7tnzx6dwfs5srlz44rzdh4n7xm
       '@halyard/reset': 1.0.0
@@ -70,12 +74,17 @@ importers:
       typescript: 5.2.2
       zod: 3.22.4
     devDependencies:
+      '@halyard/prettier-config': link:../../packages/prettier
       autoprefixer: 10.4.16_postcss@8.4.31
       eslint: 8.54.0
       eslint-plugin-astro: 0.29.1_eslint@8.54.0
       postcss: 8.4.31
+      prettier: 3.1.0
       prettier-plugin-astro: 0.12.2
       vite: 4.5.0
+
+  packages/prettier:
+    specifiers: {}
 
 packages:
 
@@ -97,13 +106,13 @@ packages:
       '@jridgewell/trace-mapping': 0.3.20
     dev: false
 
-  /@astrojs/check/0.3.1_begfeaau5vcimuafwi3vctrbdm:
+  /@astrojs/check/0.3.1_ffhif7pxshgirw44kv46whcfeq:
     resolution: {integrity: sha512-3LjEUvh7Z4v9NPokaqKMXQ0DwnSXfmtcyAuWVTjNt9yzjv54SxykobV5CTOB3TIko+Rqg59ejamJBxaJN6fvkw==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
     dependencies:
-      '@astrojs/language-server': 2.5.2_begfeaau5vcimuafwi3vctrbdm
+      '@astrojs/language-server': 2.5.2_ffhif7pxshgirw44kv46whcfeq
       chokidar: 3.5.3
       fast-glob: 3.3.2
       kleur: 4.1.5
@@ -124,7 +133,7 @@ packages:
     resolution: {integrity: sha512-06DD2ZnItMwUnH81LBLco3tWjcZ1lGU9rLCCBaeUCGYe9cI0wKyY2W3kDyoW1I6GmcWgt1fu+D1CTvz+FIKf8A==}
     dev: false
 
-  /@astrojs/language-server/2.5.2_begfeaau5vcimuafwi3vctrbdm:
+  /@astrojs/language-server/2.5.2_ffhif7pxshgirw44kv46whcfeq:
     resolution: {integrity: sha512-O5SMzoQ65wSxA1KygreI9UJYmHpgt15bSYBxceHwqX7OCDM4Ek8mr6mZn45LGDtwM3dp1uup7kp8exfRPwIFbA==}
     hasBin: true
     peerDependencies:
@@ -146,11 +155,12 @@ packages:
       '@volar/typescript': 1.10.10
       fast-glob: 3.3.2
       muggle-string: 0.3.1
+      prettier: 3.1.0
       prettier-plugin-astro: 0.12.2
       volar-service-css: 0.0.16_zn4ks6lotgotle2ok3wx3jdqyy
       volar-service-emmet: 0.0.16_zn4ks6lotgotle2ok3wx3jdqyy
       volar-service-html: 0.0.16_zn4ks6lotgotle2ok3wx3jdqyy
-      volar-service-prettier: 0.0.16_zn4ks6lotgotle2ok3wx3jdqyy
+      volar-service-prettier: 0.0.16_bd7bkwn5ygewhflluouprbg7hy
       volar-service-typescript: 0.0.16_bmlukdep6nw27m3ij7hqjl5q3y
       volar-service-typescript-twoslash-queries: 0.0.16_zn4ks6lotgotle2ok3wx3jdqyy
       vscode-html-languageservice: 5.1.1
@@ -2646,7 +2656,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-prettier/4.2.1_gpykmyejmlalemimawo4xcptki:
+  /eslint-plugin-prettier/4.2.1_a6ppxcnxb5obg7lzwilkwvv4qa:
     resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -2659,7 +2669,7 @@ packages:
     dependencies:
       eslint: 8.54.0
       eslint-config-prettier: 8.10.0_eslint@8.54.0
-      prettier: 2.8.8
+      prettier: 3.1.0
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -6263,7 +6273,7 @@ packages:
       vscode-uri: 3.0.8
     dev: false
 
-  /volar-service-prettier/0.0.16_zn4ks6lotgotle2ok3wx3jdqyy:
+  /volar-service-prettier/0.0.16_bd7bkwn5ygewhflluouprbg7hy:
     resolution: {integrity: sha512-Kj2ZdwJGEvfYbsHW8Sjrew/7EB4PgRoas4f8yAJzUUVxIC/kvhUwLDxQc8+N2IibomN76asJGWe+i6VZZvgIkw==}
     peerDependencies:
       '@volar/language-service': ~1.10.0
@@ -6275,6 +6285,7 @@ packages:
         optional: true
     dependencies:
       '@volar/language-service': 1.10.10
+      prettier: 3.1.0
     dev: false
 
   /volar-service-typescript-twoslash-queries/0.0.16_zn4ks6lotgotle2ok3wx3jdqyy:

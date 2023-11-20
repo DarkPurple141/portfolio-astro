@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "name": "@halyard/prettier-config",
+  "main": "config.js",
+  "source": "config.js",
+  "files": [
+    "config.js"
+  ]
+}
