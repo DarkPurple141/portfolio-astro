@@ -1,0 +1,34 @@
+---
+import { Heading, PreviewCard, Stack } from '@halyard/ui';
+import Layout from '../../layouts/Layout.astro';
+
+const posts: any[] = await fetch('https://alhinds.com/content').then((res) =>
+  res.json()
+  // @ts-expect-error
+).then(posts => posts.map(p => p.frontmatter));
+---
+
+<Layout title="Alex Hinds Posts | alhinds.com" description='Articles and blog posts for my website.'>
+	<Stack gap="gap-8">
+    <Heading className="heading-xl" id="posts" as="h1">
+      Posts
+    </Heading>
+    <ul class="flex gap-8 flex-col" aria-describedby="posts">
+      {posts.map((post) => (
+        <li class="flex flex-col gap-1">
+          <PreviewCard
+            heading={post.title}
+            href={`/posts/${post.slug}`}
+            published={{
+              formatted: post.created.formatted,
+              iso: post.created.raw,
+            }}
+          >
+            {post.description}
+          </PreviewCard>
+        </li>
+      ))}
+    </ul>
+  </Stack>
+</Layout>
+
