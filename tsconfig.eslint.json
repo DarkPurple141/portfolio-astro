@@ -1,0 +1,16 @@
+{
+  "extends": ["@halyard/tsconfig/base"],
+  "compilerOptions": {
+    "allowJs": true
+  },
+  "include": [
+    "*/**/.eslintrc.cjs",
+    ".eslintrc.cjs",
+    "*/**/*.cjs",
+    "*/**/*.mjs",
+    "*/**/*.js",
+    "*/**/*.jsx",
+    "*/**/*.ts",
+    "*/**/*.tsx"
+  ]
+}

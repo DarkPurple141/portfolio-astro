@@ -1,11 +1,23 @@
 ---
-import { Heading, PreviewCard, Stack } from '@halyard/ui';
-import Layout from '../../layouts/Layout.astro';
+import { Heading, PreviewCard, Stack } from '@halyard/ui'
+import Layout from '../../layouts/Layout.astro'
+import zod from 'zod'
 
-const posts: any[] = await fetch('https://alhinds.com/content').then((res) =>
+const postFrontMatter = zod.object({
+  title: zod.string(),
+  slug: zod.string(),
+  description: zod.string(),
+  created: zod.object({
+    formatted: zod.string(),
+    raw: zod.string(),
+  }),
+});
+
+const postsSchema = zod.array(postFrontMatter);
+
+const posts = await fetch('https://alhinds.com/content').then((res) =>
   res.json()
-  // @ts-expect-error
-).then(posts => posts.map(p => p.frontmatter));
+).then(postsSchema.parse);
 ---
 
 <Layout title="Alex Hinds Posts | alhinds.com" description='Articles and blog posts for my website.'>

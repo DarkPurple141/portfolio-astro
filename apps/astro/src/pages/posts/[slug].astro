@@ -6,7 +6,7 @@ export async function getStaticPaths() {
   return fetch('https://alhinds.com/content').then((res) =>
   res.json()
   // @ts-expect-error
-).then(posts => posts.map((post) => ({ params: { slug: post.frontmatter.slug }})) || []);
+  ).then(posts => posts.map((post) => ({ params: { slug: post.slug }})) || []);
 }
 
 const { slug } = Astro.params;

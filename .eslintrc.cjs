@@ -10,7 +10,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    project: ['./packages/*/tsconfig.eslint.json'],
+    project: ['./tsconfig.eslint.json'],
   },
   ignorePatterns: ['dist', '*.js'],
   extends: [
